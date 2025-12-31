@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col min-h-screen">
         <!-- desktop Header -->
-        <div>
+        <div class=" hidden lg:block">
             <HeaderDesktop />
         </div>
         <!-- Mobile Header -->
