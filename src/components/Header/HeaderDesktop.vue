@@ -1,7 +1,7 @@
 <template>
     <header class=" flex h-20 w-full relative z-[100] shadow-xl transition-colors duration-300"
         :class="isDarkMode ? 'bg-[#e4b764]' : 'bg-[#f8e889]'">
-        <div class=" w-1/5 flex items-center justify-center relative z-20 rounded-tr-[45px]"
+        <div class=" w-1/5 flex items-center justify-center relative z-20 rounded-tr-[45px] h-[98px]"
             :class="isDarkMode ? 'bg-neutral-950' : 'bg-neutral-100 border-r-2 border-[#e4b764]'">
             <div class="text-4xl font-black tracking-tighter" :class="isDarkMode ? 'text-white ' : 'text-black'">
                 LOGO
@@ -27,10 +27,10 @@
                                 leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-2"
                                 class="bg-white">
                                 <div v-if="item.isDropdown && activeDropdown === item.label"
-                                    class=" absolute top-[120%] left-0 w-[200px]  bg-white/50 backdrop-blur-md rounded-[20px] p-4 shadow-2xl z-[500] border border-gray-300">
+                                    class=" absolute top-[120%] left-0 w-[200px]  bg-white/70 backdrop-blur-md rounded-[20px] p-1 shadow-2xl z-[500] border border-gray-300">
                                     <div class=" flex flex-col gap-2 ">
                                         <div v-for="sub in item.items" :key="sub.label"
-                                            class="flex  items-center gap-4 bg-black/5   backdrop-blur-md rounded-[20px] px-4 py-2 border border-gray-300/20 hover:bg-black/10 transition-all cursor-pointer">
+                                            class="flex  items-center gap-4 bg-gray-50/25  backdrop-blur-md rounded-[20px] px-2 py-2 border border-gray-300/20 hover:bg-black/10 transition-all cursor-pointer">
                                             
                                                 <i :class="sub.icon" class=" text-lg text-[#e4b764]"></i>
 
@@ -57,10 +57,10 @@
                     </template>
                     <template v-else>
                         <div
-                            class=" flex items-center gap-4 bg-black/90 rounded-full px-4 py-1 border border-[#e4b764]/30 shadow-lg">
+                            class="  flex items-center gap-4 bg-black/90 rounded-full px-2 py-1 border border-[#e4b764]/30 shadow-lg h-12 m-1">
                             <div class=" relative">
                                 <div @click="toggleWallet"
-                                    class="bg-white rounded-full px-2 py-1 flex items-center gap-3 cursor-pointer shadow-md min-w-[140px] justify-between">
+                                    class="bg-white rounded-full px-2 py-1 flex items-center gap-3 cursor-pointer shadow-md min-w-[140px] h-8 justify-between">
                                     <div
                                         class="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-neutral-100">
                                         <i class="pi pi-dollar text-[#e4b764]"></i>
@@ -75,10 +75,10 @@
                                     enter-from-class="opacity-0 -translate-y-4 scale-95"
                                     enter-to-class="opacity-100 translate-y-0 scale-100">
                                     <div v-if="isWalletOpen"
-                                        class=" absolute top-[120%] left-0 w-[200px] bg-neutral-500/60 backdrop-blur-md rounded-[30px] p-4 shadow-2xl z-[500] border border-white/20">
+                                        class=" absolute top-[120%] left-0 w-[200px] bg-neutral-500/40 backdrop-blur-md rounded-[30px] p-1 shadow-2xl z-[500] border border-white/20">
                                         <div class=" flex flex-col gap-3 ">
                                             <div
-                                                class="flex  items-center gap-4 bg-black/5 rounded-full px-4 py-2 border border-white/10 hover:bg-black/60 transition-all cursor-pointer">
+                                                class="flex  items-center gap-4 bg-black/10 rounded-full px-4 py-2 border border-white/10 hover:bg-black/60 transition-all cursor-pointer">
                                                 <div
                                                     class=" w-7 h-7 rounded-full border border-white/20 flex items-center justify-center text-white text-xl bg-gradient-to-b from-gray-300 to-gray-500">
                                                     <i class="pi pi-prime"></i>
@@ -196,7 +196,7 @@
                 </div>
 
             </div>
-            <div class=" flex-1 flex items-center justify-between px-6"
+            <div class=" flex-1 flex items-center justify-between px-6 py-2"
                 :class="isDarkMode ? 'bg-neutral-950' : 'bg-neutral-100'">
                 <div class="flex gap-6">
                     <a v-for="item in subNavItems" :key="item.label"
